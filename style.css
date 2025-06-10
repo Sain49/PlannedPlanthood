@@ -189,4 +189,51 @@ body {
   font-family: var(--font-base);
   background-color: var(--clr-accent-light-1);
   color: var(--clr-primary-dark);
+  line-height: 1.6;
+}
+
+/* header styles */
+body > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: var(--clr-neutral-100);
+  box-shadow: var(--border-shadow);
+  height: 4rem;
+}
+
+body > header > figure {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+body > header > figure svg.logo {
+  max-width: 40px;
+  max-height: 40px;
+  background-color: var(--clr-green-400); /*needs to be changed*/
+}
+
+body > header > figure > p {
+  /* font-weight: var(--fw-bold); */
+  font-size: var(--fs-500);
+  color: var(--clr-green-400);
+  margin-bottom: 0;
+  max-width: 10ch;
+  padding: 0;
+  line-height: 0.9;
+}
+
+/* nav style */
+body > header > nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+body > header > nav a {
+  padding: 0.5em;
 }
