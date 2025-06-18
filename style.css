@@ -645,11 +645,11 @@ button:focus-visible {
 
 .plant-card footer h4 {
   margin: 0;
+  font-size: var(--fs-200);
 }
 
 .plant-card time {
-  font-size: var(--fs-00);
-  color: var(--clr-neutral-300);
+  font-size: var(--fs-200);
 }
 
 /* responsiveness for smaller screens */
