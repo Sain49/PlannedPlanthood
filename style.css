@@ -199,10 +199,7 @@ button {
   color: var(--clr-neutral-100);
   cursor: pointer;
   font-weight: var(--fw-400);
-  border-bottom-left-radius: 1rem;
-  border-top-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-radius: 2rem;
   padding: 0.5em 1em;
 }
 
@@ -475,6 +472,7 @@ button {
   overflow: hidden;
   width: 100%;
   max-width: 20rem;
+  margin-left: 0.4rem;
 }
 
 .newsletter-form input[type="email"] {
@@ -534,9 +532,9 @@ button {
   .news-letters__section {
     padding: 1rem 0;
   }
-  .icon-circle {
+  /* .icon-circle {
     display: none;
-  }
+  } */
 }
 
 /* plant catalog section */
@@ -723,9 +721,6 @@ button {
 
 /* responsiveness for smaller screens */
 @media (max-width: 768px) {
-  /* .main-aside {
-    padding: 1.5rem 0;
-  } */
   .main-aside > div.content-container {
     margin-bottom: 0;
     padding: 2rem;
@@ -736,7 +731,7 @@ button {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    /* padding: 1rem; */
+
     text-align: center;
   }
 
@@ -745,7 +740,7 @@ button {
     align-items: center;
   }
 
-  .main-aside button {
+  .main-aside > div > section.aside-section > button {
     align-self: center;
     width: auto;
     padding: 0.5rem 1.5rem;
@@ -756,11 +751,11 @@ button {
 /* footer / contact section */
 .main-footer {
   background-color: var(--clr-green-400);
+  padding: 3rem 0 2rem 0;
 }
 
-.main-footer > footer > div {
+footer.main-footer > div {
   display: flex;
-  padding: 3rem 0 2rem 0;
 
   .contact-section {
     max-width: 30rem;
@@ -790,7 +785,7 @@ button {
 
 .contact-section > .contact-icon {
   display: flex;
-  align-items: center;
+  align-items: start;
   padding: 0.5rem 0;
   gap: 0.5rem;
 
@@ -805,4 +800,20 @@ button {
   margin: 0;
   display: flex;
   flex-direction: column;
+}
+
+/* responsiveness for smaller screens */
+@media (max-width: 768px) {
+  footer.main-footer {
+    padding: 2rem 0 1.5rem 0;
+  }
+
+  footer.main-footer > div.content-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-menu {
+    display: none;
+  }
 }
