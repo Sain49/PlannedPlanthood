@@ -182,7 +182,7 @@ a {
 
   &:hover,
   &:focus-visible {
-    color: var(--clr-primary-light-1);
+    color: var(--clr-green-800);
     text-decoration: underline;
   }
 }
@@ -201,6 +201,15 @@ button {
   font-weight: var(--fw-400);
   border-radius: 2rem;
   padding: 0.5em 1em;
+}
+
+button:hover {
+  background-color: var(--clr-green-800);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--clr-robust);
+  outline-offset: 2px;
 }
 
 /* header styles */
@@ -772,6 +781,12 @@ footer.main-footer > div {
 
   a {
     color: var(--clr-neutral-100);
+
+    &:hover,
+    &:focus-visible {
+      color: var(--clr-green-800);
+      text-decoration: underline;
+    }
   }
 }
 
