@@ -340,7 +340,7 @@ button {
 /* main section */
 /* featured plant section */
 .featured-plant__section {
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .featured-plant__section > div > header {
@@ -401,21 +401,64 @@ button {
   display: block;
 }
 
-/* nyhetsbrev section */
+/* responisiveness for smaller screen*/
+@media (max-width: 768px) {
+  .featured-plant__section {
+    padding: 1.5rem 0;
+  }
+  .image-gallery {
+    grid-template-areas:
+      "a a b b"
+      "a a c c"
+      "d e f f";
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-plant__section {
+    padding: 1rem 0;
+  }
+  .featured-plant__section > div > header h1 {
+    font-size: clamp(var(--fs-600), 10vw, var(--fs-800)); 
+  }
+
+  .featured-plant__section > div > header p {
+    font-size: clamp(var(--fs-200), 4vw, var(--fs-400));
+  }
+
+  .image-gallery {
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f";
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px; 
+    border-width: 0.5rem;
+
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    }
+  }
+}
+
+/* news letter section */
 .news-letters__section {
   background-color: var(--clr-neutral-100);
+  padding: 2rem 0;
 }
 
 .news-letters__section > div {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0rem;
 
   h2 {
     margin: 0;
     padding: 0.5rem;
-    font-size: var(--fs-700);
   }
 }
 
@@ -438,7 +481,7 @@ button {
   padding: 0.3rem 1.3rem;
   border: none;
   outline: none;
-  font-size: 1rem;
+  font-size: var(--fs-400);
 }
 
 .newsletter-form button {
@@ -458,8 +501,8 @@ button {
 }
 
 .icon-circle svg {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 90px;
+  max-height: 90px;
 }
 
 /* plant catalog section */
@@ -471,8 +514,42 @@ button {
   margin-top: 2rem;
 }
 
+/* responsiveness for smaller screen */
+@media (max-width: 768px) {
+  .news-letters__section {
+    padding: 1.5rem 0;
+  }
+  .news-letters__section > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .newsletter-text {
+    align-items: center;
+    text-align: center; 
+  }
+
+  .newsletter-form {
+    width: 100%;
+  }
+
+  .icon-circle {
+    order: -1;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .news-letters__section {
+    padding: 1rem 0;
+  }
+  .icon-circle {
+    display: none; 
+  }
+}
+
 /* card style */
-/* Container styling */
 .plant-card {
   background: var(--clr-neutral-100);
   overflow: hidden;
