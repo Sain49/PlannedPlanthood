@@ -476,7 +476,7 @@ button:focus-visible {
 
 .newsletter-form {
   display: flex;
-  border: 1px solid #1c1c1c;
+  border: 1px solid var(--clr-neutral-900);
   border-radius: 2rem;
   overflow: hidden;
   width: 100%;
@@ -569,21 +569,39 @@ button:focus-visible {
   box-shadow: var(--border-shadow);
 }
 
-/* Top image styling */
 .plant-card img:first-of-type {
   width: 100%;
   height: auto;
   object-fit: cover;
+  order: -1;
 }
 
-/* Tag container */
+.plant-image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.plant-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.plant-image-wrapper svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
 .plant-tags {
   display: flex;
   gap: 0.3rem;
   flex-wrap: wrap;
 }
 
-/* Individual tag styles */
 .plant-tags p {
   padding: 0.2rem 0.5rem 0.3rem 0.5rem;
   margin-bottom: 0;
